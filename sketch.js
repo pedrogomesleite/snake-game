@@ -164,7 +164,7 @@ class Body {
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
   frameRate(PI);
   //frameRate(0.5);
   gameW = width / size;
@@ -225,22 +225,22 @@ function createFruit(game) {
 }
 
 function keyPressed() {
-  if (keyCode === 87) {
+  if (keyCode === 87 || keyCode === UP_ARROW) {
     if(snake.dir != down) {
       snake.dir = up;
     }
   } 
-  else if (keyCode === 83) {
+  else if (keyCode === 83 || keyCode === DOWN_ARROW) {
     if(snake.dir != up) {
       snake.dir = down;
     }
   }
-  else if (keyCode === 65) {
+  else if (keyCode === 65 || keyCode === LEFT_ARROW) {
     if(snake.dir != right) {
       snake.dir = left;
     }
   }
-  else if (keyCode === 68) {
+  else if (keyCode === 68 || keyCode === RIGHT_ARROW) {
     if(snake.dir != left) {
       snake.dir = right;
     }
